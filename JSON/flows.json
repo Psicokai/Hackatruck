@@ -1,0 +1,352 @@
+[
+    {
+        "id": "d6de17cb5f53bdc4",
+        "type": "tab",
+        "label": "Leo Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9428957d752c2054",
+        "type": "http in",
+        "z": "d6de17cb5f53bdc4",
+        "name": "",
+        "url": "/leoGET",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 70,
+        "y": 80,
+        "wires": [
+            [
+                "6a71805e97d8604f"
+            ]
+        ]
+    },
+    {
+        "id": "cdf4aeb4de37e129",
+        "type": "http response",
+        "z": "d6de17cb5f53bdc4",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 830,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6a71805e97d8604f",
+        "type": "cloudantplus out",
+        "z": "d6de17cb5f53bdc4",
+        "name": "",
+        "cloudant": "881f0840834bf82f",
+        "database": "leobancodedados",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 450,
+        "y": 80,
+        "wires": [
+            [
+                "ec37a9cdda12bb64",
+                "cdf4aeb4de37e129"
+            ]
+        ]
+    },
+    {
+        "id": "ec37a9cdda12bb64",
+        "type": "debug",
+        "z": "d6de17cb5f53bdc4",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "407e3f7e979a3ee1",
+        "type": "http in",
+        "z": "d6de17cb5f53bdc4",
+        "name": "",
+        "url": "/leoPUT",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 70,
+        "y": 320,
+        "wires": [
+            [
+                "abe2b79d16f7d3f5"
+            ]
+        ]
+    },
+    {
+        "id": "7e61ecea2f842846",
+        "type": "http response",
+        "z": "d6de17cb5f53bdc4",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 830,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "abe2b79d16f7d3f5",
+        "type": "cloudantplus out",
+        "z": "d6de17cb5f53bdc4",
+        "name": "",
+        "cloudant": "881f0840834bf82f",
+        "database": "leobancodedados",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 430,
+        "y": 320,
+        "wires": [
+            [
+                "e1c25adece4a901e",
+                "7e61ecea2f842846"
+            ]
+        ]
+    },
+    {
+        "id": "e1c25adece4a901e",
+        "type": "debug",
+        "z": "d6de17cb5f53bdc4",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "aae4e8a147026bcd",
+        "type": "http in",
+        "z": "d6de17cb5f53bdc4",
+        "name": "",
+        "url": "/leoDELETE",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 440,
+        "wires": [
+            [
+                "da46ea09d653e69e"
+            ]
+        ]
+    },
+    {
+        "id": "bcde6bae69e7e315",
+        "type": "http response",
+        "z": "d6de17cb5f53bdc4",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 830,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "da46ea09d653e69e",
+        "type": "cloudantplus out",
+        "z": "d6de17cb5f53bdc4",
+        "name": "",
+        "cloudant": "881f0840834bf82f",
+        "database": "leobancodedados",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "delete",
+        "x": 430,
+        "y": 440,
+        "wires": [
+            [
+                "8ef8428f4720505a",
+                "bcde6bae69e7e315"
+            ]
+        ]
+    },
+    {
+        "id": "8ef8428f4720505a",
+        "type": "debug",
+        "z": "d6de17cb5f53bdc4",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "8459c8ed7332704e",
+        "type": "http in",
+        "z": "d6de17cb5f53bdc4",
+        "name": "",
+        "url": "/leoREAD",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 560,
+        "wires": [
+            [
+                "f4ff1c1b5c3a5a8e"
+            ]
+        ]
+    },
+    {
+        "id": "50be5ea681a21ae7",
+        "type": "http response",
+        "z": "d6de17cb5f53bdc4",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 830,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "cb665753e3190756",
+        "type": "debug",
+        "z": "d6de17cb5f53bdc4",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "f4ff1c1b5c3a5a8e",
+        "type": "cloudantplus in",
+        "z": "d6de17cb5f53bdc4",
+        "name": "",
+        "cloudant": "881f0840834bf82f",
+        "database": "leobancodedados",
+        "service": "_ext_",
+        "search": "_all_",
+        "design": "",
+        "index": "",
+        "x": 430,
+        "y": 560,
+        "wires": [
+            [
+                "50be5ea681a21ae7",
+                "cb665753e3190756"
+            ]
+        ]
+    },
+    {
+        "id": "5575a021d0b76dac",
+        "type": "http in",
+        "z": "d6de17cb5f53bdc4",
+        "name": "",
+        "url": "/leoPOST",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 200,
+        "wires": [
+            [
+                "5b84c91cbf5ff12b"
+            ]
+        ]
+    },
+    {
+        "id": "fca1b01302881f0c",
+        "type": "http response",
+        "z": "d6de17cb5f53bdc4",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 830,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "866774c4e9cc6c19",
+        "type": "cloudantplus out",
+        "z": "d6de17cb5f53bdc4",
+        "name": "",
+        "cloudant": "881f0840834bf82f",
+        "database": "leobancodedados",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 450,
+        "y": 200,
+        "wires": [
+            [
+                "359fddb4338c8bf5",
+                "fca1b01302881f0c"
+            ]
+        ]
+    },
+    {
+        "id": "359fddb4338c8bf5",
+        "type": "debug",
+        "z": "d6de17cb5f53bdc4",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "5b84c91cbf5ff12b",
+        "type": "split",
+        "z": "d6de17cb5f53bdc4",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 230,
+        "y": 200,
+        "wires": [
+            [
+                "866774c4e9cc6c19"
+            ]
+        ]
+    },
+    {
+        "id": "881f0840834bf82f",
+        "type": "cloudantplus",
+        "host": "https://apikey-v2-1sf2n1o95m2vpr2jfg0nc12cqd076yoyoopnhgjzuh5o:a7b29644e36c2dd9ed66686c4203c23b@8472bb0f-4f34-4675-bd25-3cf7a52343d1-bluemix.cloudantnosqldb.appdomain.cloud",
+        "name": "",
+        "useapikey": true
+    }
+]
